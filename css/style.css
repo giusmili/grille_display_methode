@@ -1,0 +1,111 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    font: 1.6rem sans-serif;
+    margin: 0;
+}
+h1,h2,h3,p,ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-weight: lighter;
+}
+*{
+    box-sizing: border-box;
+}
+/* scroll bars */
+
+*{
+    /* For FF and non-webkit browsers */
+    scrollbar-width: thin;
+    scrollbar-color: #000 #FFF;
+}
+*::-webkit-scrollbar {
+    width: .2rem;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #222;
+    outline: .1rem solid #333;
+}
+
+/* theme */
+
+ul li img{
+    display: block;
+    width: 100%;
+    /* modifier la largeur */
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #c0392b;
+
+}
+header h1{
+    text-align: center;
+    line-height: 6rem;
+    color: #fff;
+    font-size: 4.5rem;
+    text-shadow: -.2rem -.2rem 0 #222; /* coté right, coté bottom, flou et couleur*/
+}
+/* '\01F44D' */
+header h1::before{
+    content:'\01F44D';
+    vertical-align: 0.8rem;
+    margin-right: 0.5rem;
+   
+}
+main{
+    max-width: 90rem;
+    margin: 9.0rem auto 1rem;
+    border: solid 0.1rem #ccc;
+    padding: 1.0rem 0 0 1.0rem;
+    background-color: #fafafa;
+    box-shadow: 0 0 1.0rem rgba(0,0,0,0.5);
+} 
+/* 
+800px / 4 = 200
+
+*/
+main ul{
+    overflow: hidden;
+}
+main ul li{
+    width: calc(100% / 4 - 1.0rem); /* méthode utile pour calculer la largeur de chaque élément de grille*/
+    float: left;
+    margin:0 1.0rem 1.0rem 0;
+}
+main ul li:nth-of-type(9){
+    width: calc(100% / 1 - 1.0rem);
+    margin:0 1.0rem 1.0rem 0;
+}
+main ul li:nth-of-type(10), main ul li:nth-of-type(11){
+    width: calc(100% / 2 - 1.0rem);
+    margin: 0 1.0rem 1.0rem 0;
+}
+/*
+margin-top: 0;
+margin-right: 10px;
+margin-bottom: 10px;
+margin-left: 0;
+
+*/
+footer{
+    background-color: #222;
+    padding: 1.0rem;
+}
+footer details{
+    max-width: 60rem;
+    margin: 0 auto;
+}
+footer details summary, footer details p{
+    text-align: center;
+    color: #fff;
+}
+footer details p{
+    font-size: small;/*small, x-small xx-small, large, x-large, xx-large*/
+    padding: .5rem;
+}
